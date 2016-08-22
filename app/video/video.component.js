@@ -19,7 +19,7 @@ var componenteDeVideo = (function () {
         var _this = this;
         this.PromesaVideos.agarrarVideos()
             .then(function (value) {
-            _this.videoExample = value; //buena practica poner value
+            _this.videoList = value; //buena practica poner value
         })
             .catch(function (error) {
             console.log('es un error');
@@ -31,8 +31,9 @@ var componenteDeVideo = (function () {
     componenteDeVideo = __decorate([
         core_1.Component({
             selector: 'componente-de-video',
-            styles: ["\n\n    .frame {\n      background-color: black !important;\n      color: white;\n      height:70%;\n\n    }\n    .heroes {\n      margin: 0 0 2em 0;\n      list-style-type: none;\n      padding: 0;\n      width: 15em;\n    }\n\n  "],
-            template: "\n    <div class=\"frame\">\n    <img src=\"{{videoExample}}\">\n\n    </div>\n  "
+            providers: [video_service_1.PromesaVideos],
+            styles: ["\n\n    .frame {\n      background-color: grey !important;\n      color: white;\n      \n\n    }\n    .contenedor {\n\n    }\n\n  "],
+            template: "\n    <div *ngFor=\"let videos of videoList\" class=\"frame\" >\n\n    <img [src]=\"videos.video\" class=\"contenedor\">\n\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [video_service_1.PromesaVideos])
     ], componenteDeVideo);

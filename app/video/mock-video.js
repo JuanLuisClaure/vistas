@@ -1,5 +1,7 @@
 "use strict";
 exports.VIDEOS = [
-    { id: 1, video: 'http://www.bankofcanada.ca/wp-content/uploads/2014/12/video-screenshot-2.jpg' },
+    {
+        id: 1, video: 'http://blogs-images.forbes.com/anthonykarcz/files/2016/04/GoogleCalGoals4-1200x500.jpg'
+    },
 ];
 //# sourceMappingURL=mock-video.js.map

@@ -12,25 +12,24 @@ import { PromesaVideos } from './video-service';
 
 @Component({
   selector: 'componente-de-video',
+  providers: [PromesaVideos],
   styles: [`
 
     .frame {
-      background-color: black !important;
+      background-color: grey !important;
       color: white;
-      height:70%;
+      
 
     }
-    .heroes {
-      margin: 0 0 2em 0;
-      list-style-type: none;
-      padding: 0;
-      width: 15em;
+    .contenedor {
+
     }
 
   `],
   template: `
-    <div class="frame">
-    <img src="{{videoExample}}">
+    <div *ngFor="let videos of videoList" class="frame" >
+
+    <img [src]="videos.video" class="contenedor">
 
     </div>
   `
@@ -50,7 +49,7 @@ import { PromesaVideos } from './video-service';
 
 export class componenteDeVideo  {
 
-videoExample: videoUrl[];
+videoList: videoUrl[];
 
 constructor(private PromesaVideos: PromesaVideos){}
 
@@ -58,7 +57,7 @@ soltarVideo(){
   this.PromesaVideos.agarrarVideos()
   .then(value => {
 
-    this.videoExample = value//buena practica poner value
+    this.videoList = value//buena practica poner value
 
   })
   .catch(error => {

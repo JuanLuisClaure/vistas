@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var video_component_1 = require('../video/video.component');
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var anywant = (function () {
     function anywant() {
@@ -16,7 +17,8 @@ var anywant = (function () {
     anywant = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n\n\n<div>\n\n<componente-de-marque></componente-de-marque>\n\n</div>\n<div>\n\n<componente-de-video></componente-de-video>\n\n</div>\n<div>\n\n<componente-de-ticket></componente-de-ticket>\n\n</div>\n\n\n\n\n\n\n\n\n\n\n"
+            directives: [video_component_1.componenteDeVideo],
+            template: "\n\n\n<div>\n\n<componente-de-marque></componente-de-marque>\n\n</div>\n\n<div>\n\n<componente-de-video></componente-de-video>\n\n</div>\n\n<div>\n\n<componente-de-ticket></componente-de-ticket>\n\n</div>\n\n\n\n\n\n\n\n\n\n\n"
         }), 
         __metadata('design:paramtypes', [])
     ], anywant);

@@ -12,9 +12,9 @@ import { Component } from '@angular/core';
   styles: [`
 
     .espera {
-      background-color: #607D8B !important;
+      background-color: black !important;
       color: white;
-      height:25%;
+      height:13%;
 
     }
     .heroes {
@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="espera">
 
-    
+    hola mundo como va
 
 
     </div>
