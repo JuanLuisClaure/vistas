@@ -9,19 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var componenteDeMarque = (function () {
-    function componenteDeMarque() {
+var mock_video_1 = require('./mock-video');
+var PromesaVideos = (function () {
+    function PromesaVideos() {
     }
-    componenteDeMarque = __decorate([
-        core_1.Component({
-            selector: 'componente-de-marque',
-            styles: ["\n\n    .selected {\n      background-color: #607D8B !important;\n      color: white;\n      height:5%;\n\n    }\n    .heroes {\n      margin: 0 0 2em 0;\n      list-style-type: none;\n      padding: 0;\n      width: 15em;\n    }\n\n  "],
-            template: "\n\n\n\n\n      <div class=\"selected\"></div>\n\n\n\n\n\n            "
-        }), 
+    PromesaVideos.prototype.agarrarVideos = function () {
+        return Promise.resolve(mock_video_1.VIDEOS);
+    };
+    // See the "Take it slow" appendix
+    PromesaVideos.prototype.agarrarVideosSlowly = function () {
+        return new Promise(function (resolve) {
+            return setTimeout(function () { return resolve(mock_video_1.VIDEOS); }, 2000);
+        } // 2 seconds
+         // 2 seconds
+        );
+    };
+    PromesaVideos = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], componenteDeMarque);
-    return componenteDeMarque;
+    ], PromesaVideos);
+    return PromesaVideos;
 }());
-exports.componenteDeMarque = componenteDeMarque;
-//# sourceMappingURL=marque.component.js.map
+exports.PromesaVideos = PromesaVideos;
+//# sourceMappingURL=video-service.js.map

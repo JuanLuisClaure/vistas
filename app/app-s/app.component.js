@@ -12,12 +12,11 @@ var core_1 = require('@angular/core');
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var anywant = (function () {
     function anywant() {
-        this.know = 'bueno empecemos';
     }
     anywant = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n\n\n  <h1>holamundo</h1>\n    <h3>{{know}}</h3>\n\n\n<componente-de-video></componente-de-video>\n<componente-de-marque></componente-de-marque>\n<componente-de-ticket></componente-de-ticket>\n\n\n\n\n"
+            template: "\n\n\n<div>\n\n<componente-de-marque></componente-de-marque>\n\n</div>\n<div>\n\n<componente-de-video></componente-de-video>\n\n</div>\n<div>\n\n<componente-de-ticket></componente-de-ticket>\n\n</div>\n\n\n\n\n\n\n\n\n\n\n"
         }), 
         __metadata('design:paramtypes', [])
     ], anywant);

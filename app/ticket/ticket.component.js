@@ -16,7 +16,8 @@ var componenteDeTicket = (function () {
     componenteDeTicket = __decorate([
         core_1.Component({
             selector: 'componente-de-ticket',
-            template: "\n    <div>hola ticket</div>\n  "
+            styles: ["\n\n    .espera {\n      background-color: #607D8B !important;\n      color: white;\n      height:25%;\n\n    }\n    .heroes {\n      margin: 0 0 2em 0;\n      list-style-type: none;\n      padding: 0;\n      width: 15em;\n    }\n\n  "],
+            template: "\n    <div class=\"espera\">\n\n    \n\n\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], componenteDeTicket);

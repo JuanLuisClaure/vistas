@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-
+import { videoUrl } from '../video/video';
 
 
 
@@ -13,13 +13,27 @@ import { Component } from '@angular/core';
   template: `
 
 
-  <h1>holamundo</h1>
-    <h3>{{know}}</h3>
+<div>
 
+<componente-de-marque></componente-de-marque>
+
+</div>
+<div>
 
 <componente-de-video></componente-de-video>
-<componente-de-marque></componente-de-marque>
+
+</div>
+<div>
+
 <componente-de-ticket></componente-de-ticket>
+
+</div>
+
+
+
+
+
+
 
 
 
@@ -40,7 +54,5 @@ import { Component } from '@angular/core';
 
 
 export class anywant  {
-
-know = 'bueno empecemos';
 
 }
