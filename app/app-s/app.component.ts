@@ -15,23 +15,13 @@ import { componenteDeVideo } from '../video/video.component'
   template: `
 
 
-<div>
 
-<componente-de-marque></componente-de-marque>
 
-</div>
-
-<div>
+<section>
 
 <componente-de-video></componente-de-video>
 
-</div>
-
-<div>
-
-<componente-de-ticket></componente-de-ticket>
-
-</div>
+</section>
 
 
 

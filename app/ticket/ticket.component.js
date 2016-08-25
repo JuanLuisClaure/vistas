@@ -16,8 +16,8 @@ var componenteDeTicket = (function () {
     componenteDeTicket = __decorate([
         core_1.Component({
             selector: 'componente-de-ticket',
-            styles: ["\n\n    .espera {\n      background-color: black !important;\n      color: white;\n      height:13%;\n\n    }\n    .heroes {\n      margin: 0 0 2em 0;\n      list-style-type: none;\n      padding: 0;\n      width: 15em;\n    }\n\n  "],
-            template: "\n    <div class=\"espera\">\n\n    hola mundo como va\n\n\n    </div>\n  "
+            styleUrls: ['../../public/sass/ticket.style.scss'],
+            template: "\n\n      <div class=\"row around-lg fondo\">\n        <div class=\"col-lg-4 bordes\">\n            <componente-de-numero></componente-de-numero>\n        </div>\n        <div class=\"col-lg-4  bordes\">\n            <div class=\"box \">\n                <componente-de-numero></componente-de-numero>\n            </div>\n        </div>\n        <div class=\"col-lg-4  bordes\">\n            <div class=\"box\">\n              <componente-de-numero></componente-de-numero>\n            </div>\n        </div>\n    </div>\n\n      "
         }), 
         __metadata('design:paramtypes', [])
     ], componenteDeTicket);

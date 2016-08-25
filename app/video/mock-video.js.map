@@ -1,1 +1,1 @@
-{"version":3,"file":"mock-video.js","sourceRoot":"","sources":["mock-video.ts"],"names":[],"mappings":";AAEa,cAAM,GAAe;IAChC;QACE,EAAE,EAAE,CAAC,EAAE,KAAK,EAAE,wFAAwF;KACvG;CAEF,CAAC"}
+{"version":3,"file":"mock-video.js","sourceRoot":"","sources":["mock-video.ts"],"names":[],"mappings":";AAEa,cAAM,GAAe;IAChC;QACE,EAAE,EAAE,CAAC,EAAE,KAAK,EAAE,yEAAyE;KACxF;CAEF,CAAC"}

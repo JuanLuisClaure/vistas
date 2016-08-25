@@ -16,8 +16,8 @@ var componenteDeMarque = (function () {
     componenteDeMarque = __decorate([
         core_1.Component({
             selector: 'componente-de-marque',
-            styles: ["\n\n    .selected {\n      background-color: #607D8B !important;\n      color: white;\n      height:5%;\n\n    }\n    .heroes {\n      margin: 0 0 2em 0;\n      list-style-type: none;\n      padding: 0;\n      width: 15em;\n    }\n\n  "],
-            template: "\n\n\n\n\n      <div class=\"selected\"></div>\n\n\n\n\n\n            "
+            styleUrls: ['../../public/sass/marque.style.scss'],
+            template: "\n\n<ul>\n<li>\n<h1 class=\"marquee\" data-marquee=\"Text contents\"></h1>\n</li>\n<li>\n<h1 class=\"marquee\" data-marquee=\"otro texto\"></h1>\n</li>\n</ul>\n\n\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], componenteDeMarque);

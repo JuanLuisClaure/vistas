@@ -32,8 +32,8 @@ var componenteDeVideo = (function () {
         core_1.Component({
             selector: 'componente-de-video',
             providers: [video_service_1.PromesaVideos],
-            styles: ["\n\n    .frame {\n      background-color: grey !important;\n      color: white;\n      \n\n    }\n    .contenedor {\n\n    }\n\n  "],
-            template: "\n    <div *ngFor=\"let videos of videoList\" class=\"frame\" >\n\n    <img [src]=\"videos.video\" class=\"contenedor\">\n\n    </div>\n  "
+            styleUrls: ['../../public/sass/video.style.scss'],
+            template: "\n\n  <div class=\"row\" >\n\n      <div class=\"col-md-12\">\n\n      <ul>\n      <li *ngFor=\"let videos of videoList\">\n      <img id=\"contenedor\" [src]=\"videos.video\" class=\"contenedor\">\n      </li>\n      </ul>\n\n          <componente-de-marque></componente-de-marque>\n          <componente-de-ticket></componente-de-ticket>\n\n      </div>\n\n  </div>\n\n\n  "
         }), 
         __metadata('design:paramtypes', [video_service_1.PromesaVideos])
     ], componenteDeVideo);

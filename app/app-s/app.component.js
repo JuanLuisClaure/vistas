@@ -18,7 +18,7 @@ var anywant = (function () {
         core_1.Component({
             selector: 'my-app',
             directives: [video_component_1.componenteDeVideo],
-            template: "\n\n\n<div>\n\n<componente-de-marque></componente-de-marque>\n\n</div>\n\n<div>\n\n<componente-de-video></componente-de-video>\n\n</div>\n\n<div>\n\n<componente-de-ticket></componente-de-ticket>\n\n</div>\n\n\n\n\n\n\n\n\n\n\n"
+            template: "\n\n\n\n\n<section>\n\n<componente-de-video></componente-de-video>\n\n</section>\n\n\n\n\n\n\n\n\n\n\n"
         }), 
         __metadata('design:paramtypes', [])
     ], anywant);

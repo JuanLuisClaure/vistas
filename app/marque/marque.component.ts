@@ -9,36 +9,22 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'componente-de-marque',
-  styles: [`
+  styleUrls: ['../../public/sass/marque.style.scss'],
 
-    .selected {
-      background-color: #607D8B !important;
-      color: white;
-      height:5%;
+    template:
+    `
 
-    }
-    .heroes {
-      margin: 0 0 2em 0;
-      list-style-type: none;
-      padding: 0;
-      width: 15em;
-    }
-
-  `],
-  template: `
+<ul>
+<li>
+<h1 class="marquee" data-marquee="Text contents"></h1>
+</li>
+<li>
+<h1 class="marquee" data-marquee="otro texto"></h1>
+</li>
+</ul>
 
 
-
-
-      <div class="selected"></div>
-
-
-
-
-
-            `
-
-
+    `
 
 
 

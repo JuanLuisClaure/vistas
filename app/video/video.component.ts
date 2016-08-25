@@ -13,28 +13,30 @@ import { PromesaVideos } from './video-service';
 @Component({
   selector: 'componente-de-video',
   providers: [PromesaVideos],
-  styles: [`
+  styleUrls: ['../../public/sass/video.style.scss'],
 
-    .frame {
-      background-color: grey !important;
-      color: white;
-      
-
-    }
-    .contenedor {
-
-    }
-
-  `],
-  template: `
-    <div *ngFor="let videos of videoList" class="frame" >
-
-    <img [src]="videos.video" class="contenedor">
-
-    </div>
+  template:
   `
 
+  <div class="row" >
 
+      <div class="col-md-12">
+
+      <ul>
+      <li *ngFor="let videos of videoList">
+      <img id="contenedor" [src]="videos.video" class="contenedor">
+      </li>
+      </ul>
+
+          <componente-de-marque></componente-de-marque>
+          <componente-de-ticket></componente-de-ticket>
+
+      </div>
+
+  </div>
+
+
+  `
 
 })
 
