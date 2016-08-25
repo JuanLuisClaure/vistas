@@ -6,6 +6,8 @@ import { PromesaVideos } from './video-service';
 
 
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -13,7 +15,7 @@ import { PromesaVideos } from './video-service';
 @Component({
   selector: 'componente-de-video',
   providers: [PromesaVideos],
-  styleUrls: ['../../public/sass/video.style.scss'],
+  styleUrls: ['../../public/pages/video.style.scss'],
 
   template:
   `
@@ -22,15 +24,14 @@ import { PromesaVideos } from './video-service';
 
       <div class="col-md-12">
 
-      <ul>
-      <li *ngFor="let videos of videoList">
-      <img id="contenedor" [src]="videos.video" class="contenedor">
-      </li>
-      </ul>
+
+
+      <img *ngFor="let videos of videoList" id="contenedor" [src]="videos.video" class="contenedor">
+
 
           <componente-de-marque></componente-de-marque>
-          <componente-de-ticket></componente-de-ticket>
 
+          <componente-de-ticket></componente-de-ticket>
       </div>
 
   </div>
@@ -61,12 +62,11 @@ soltarVideo(){
 
     this.videoList = value//buena practica poner value
 
-  })
-  .catch(error => {
+  }).catch(error => {
 
     console.log('es un error');
 
-  }) ;
+  })
 }
 
 

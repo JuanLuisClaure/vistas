@@ -9,16 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var numero_service_1 = require('./numero-service');
 var numeroComponente = (function () {
-    function numeroComponente() {
+    function numeroComponente(promesanumerosdelticket) {
+        this.promesanumerosdelticket = promesanumerosdelticket;
     }
+    numeroComponente.prototype.soltarNumerosDeTickets = function () {
+        var _this = this;
+        this.promesanumerosdelticket.agarrarMensajesDeNumero()
+            .then(function (value) {
+            _this.numeroList = value; //pasando los datos del json para enlistar
+        }).catch(function (error) {
+            console.log('es un error');
+        });
+    };
+    numeroComponente.prototype.ngOnInit = function () {
+        this.soltarNumerosDeTickets();
+    };
     numeroComponente = __decorate([
         core_1.Component({
             selector: 'componente-de-numero',
-            encapsulation: core_1.ViewEncapsulation.Emulated,
-            template: "\n    <div class=\"numero\">\n        <p>banco sol</p>\n             <hr>\n          <h1>C5</h1>\n             <hr>\n         <p>juanluis</p>\n    </div>\n\n\n\n    "
+            providers: [numero_service_1.PromesaNumerosDelTicket],
+            styleUrls: ['../../public/pages/numero.style.scss'],
+            template: "\n\n    <ul><li *ngFor=\"let x of numeroList\">{{x.puesto}}</li></ul>\n\n    "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [numero_service_1.PromesaNumerosDelTicket])
     ], numeroComponente);
     return numeroComponente;
 }());

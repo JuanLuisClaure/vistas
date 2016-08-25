@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { componenteDeVideo } from '../video/video.component'
 
 
 
@@ -11,13 +10,13 @@ import { componenteDeVideo } from '../video/video.component'
 
 @Component({
   selector: 'my-app',
-  directives: [componenteDeVideo],
+  
   template: `
 
 
 
 
-<section>
+<section >
 
 <componente-de-video></componente-de-video>
 

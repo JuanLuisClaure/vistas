@@ -9,17 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var marque_service_1 = require('./marque-service');
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var componenteDeMarque = (function () {
-    function componenteDeMarque() {
+    function componenteDeMarque(promesasdemensajesmarque) {
+        this.promesasdemensajesmarque = promesasdemensajesmarque;
+        this.title = 'holamundo';
     }
+    componenteDeMarque.prototype.soltarMensajes = function () {
+        var _this = this;
+        this.promesasdemensajesmarque.agarrarMarque()
+            .then(function (value) {
+            _this.marqueMensajesList = value;
+        }).catch(function (error) {
+            console.log('error');
+        });
+    };
+    componenteDeMarque.prototype.ngOnInit = function () {
+        this.soltarMensajes();
+    };
     componenteDeMarque = __decorate([
         core_1.Component({
             selector: 'componente-de-marque',
-            styleUrls: ['../../public/sass/marque.style.scss'],
-            template: "\n\n<ul>\n<li>\n<h1 class=\"marquee\" data-marquee=\"Text contents\"></h1>\n</li>\n<li>\n<h1 class=\"marquee\" data-marquee=\"otro texto\"></h1>\n</li>\n</ul>\n\n\n    "
+            providers: [marque_service_1.PromesaMarqueMensajes],
+            styleUrls: ['../../public/pages/marque.style.scss'],
+            template: "\n<div class=\"marquee\" data-marque=\"hola vida\"></div>\n\n\n\n\n\n    "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [marque_service_1.PromesaMarqueMensajes])
     ], componenteDeMarque);
     return componenteDeMarque;
 }());

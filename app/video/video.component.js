@@ -20,8 +20,7 @@ var componenteDeVideo = (function () {
         this.PromesaVideos.agarrarVideos()
             .then(function (value) {
             _this.videoList = value; //buena practica poner value
-        })
-            .catch(function (error) {
+        }).catch(function (error) {
             console.log('es un error');
         });
     };
@@ -32,8 +31,8 @@ var componenteDeVideo = (function () {
         core_1.Component({
             selector: 'componente-de-video',
             providers: [video_service_1.PromesaVideos],
-            styleUrls: ['../../public/sass/video.style.scss'],
-            template: "\n\n  <div class=\"row\" >\n\n      <div class=\"col-md-12\">\n\n      <ul>\n      <li *ngFor=\"let videos of videoList\">\n      <img id=\"contenedor\" [src]=\"videos.video\" class=\"contenedor\">\n      </li>\n      </ul>\n\n          <componente-de-marque></componente-de-marque>\n          <componente-de-ticket></componente-de-ticket>\n\n      </div>\n\n  </div>\n\n\n  "
+            styleUrls: ['../../public/pages/video.style.scss'],
+            template: "\n\n  <div class=\"row\" >\n\n      <div class=\"col-md-12\">\n\n\n\n      <img *ngFor=\"let videos of videoList\" id=\"contenedor\" [src]=\"videos.video\" class=\"contenedor\">\n\n\n          <componente-de-marque></componente-de-marque>\n\n          <componente-de-ticket></componente-de-ticket>\n      </div>\n\n  </div>\n\n\n  "
         }), 
         __metadata('design:paramtypes', [video_service_1.PromesaVideos])
     ], componenteDeVideo);

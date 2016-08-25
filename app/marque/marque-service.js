@@ -9,18 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var anywant = (function () {
-    function anywant() {
+var mock_marque_1 = require('./mock-marque');
+var PromesaMarqueMensajes = (function () {
+    function PromesaMarqueMensajes() {
     }
-    anywant = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n\n\n\n\n<section >\n\n<componente-de-video></componente-de-video>\n\n</section>\n\n\n\n\n\n\n\n\n\n\n"
-        }), 
+    PromesaMarqueMensajes.prototype.agarrarMarque = function () {
+        return Promise.resolve(mock_marque_1.MARQUE);
+    };
+    // See the "Take it slow" appendix
+    PromesaMarqueMensajes.prototype.agarrarmarqueConTiempo = function () {
+        return new Promise(function (resolve) {
+            return setTimeout(function () { return resolve(mock_marque_1.MARQUE); }, 2000);
+        } // 2 seconds
+         // 2 seconds
+        );
+    };
+    PromesaMarqueMensajes = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], anywant);
-    return anywant;
+    ], PromesaMarqueMensajes);
+    return PromesaMarqueMensajes;
 }());
-exports.anywant = anywant;
-//# sourceMappingURL=app.component.js.map
+exports.PromesaMarqueMensajes = PromesaMarqueMensajes;
+//# sourceMappingURL=marque-service.js.map

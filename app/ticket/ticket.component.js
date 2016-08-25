@@ -16,8 +16,8 @@ var componenteDeTicket = (function () {
     componenteDeTicket = __decorate([
         core_1.Component({
             selector: 'componente-de-ticket',
-            styleUrls: ['../../public/sass/ticket.style.scss'],
-            template: "\n\n      <div class=\"row around-lg fondo\">\n        <div class=\"col-lg-4 bordes\">\n            <componente-de-numero></componente-de-numero>\n        </div>\n        <div class=\"col-lg-4  bordes\">\n            <div class=\"box \">\n                <componente-de-numero></componente-de-numero>\n            </div>\n        </div>\n        <div class=\"col-lg-4  bordes\">\n            <div class=\"box\">\n              <componente-de-numero></componente-de-numero>\n            </div>\n        </div>\n    </div>\n\n      "
+            styleUrls: ['../../public/pages/ticket.style.scss'],
+            template: "\n\n      <div class=\"row around-lg fondo\">\n        <div class=\"col-lg-4 bordes\">\n        <componente-de-numero>\n\n        </componente-de-numero>\n\n        </div>\n        <div class=\"col-lg-4  bordes\">\n            <div class=\"box \">\n            <componente-de-numero>\n\n            </componente-de-numero>\n\n            </div>\n        </div>\n        <div class=\"col-lg-4  bordes\">\n            <div class=\"box\">\n            <componente-de-numero></componente-de-numero>\n\n            </div>\n        </div>\n    </div>\n\n      "
         }), 
         __metadata('design:paramtypes', [])
     ], componenteDeTicket);

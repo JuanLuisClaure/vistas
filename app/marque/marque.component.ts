@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-
+import { marqueObj } from './marque';
+import { PromesaMarqueMensajes } from './marque-service';
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -9,19 +10,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'componente-de-marque',
-  styleUrls: ['../../public/sass/marque.style.scss'],
+  providers: [PromesaMarqueMensajes],
+  styleUrls: ['../../public/pages/marque.style.scss'],
 
     template:
     `
+<div class="marquee" data-marque="hola vida"></div>
 
-<ul>
-<li>
-<h1 class="marquee" data-marquee="Text contents"></h1>
-</li>
-<li>
-<h1 class="marquee" data-marquee="otro texto"></h1>
-</li>
-</ul>
+
+
 
 
     `
@@ -37,11 +34,30 @@ import { Component } from '@angular/core';
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////7777777
 
-
+// <ul><li *ngFor="let x of marqueMensajesList">{{x.mensaje}}</li></ul>
 
 
 export class componenteDeMarque  {
+title='holamundo';
+marqueMensajesList: marqueObj[];
+
+constructor(private promesasdemensajesmarque:PromesaMarqueMensajes){}
+
+soltarMensajes(){
+
+    this.promesasdemensajesmarque.agarrarMarque()
+    .then(value => {
+        this.marqueMensajesList = value
+    }).catch(error => {
+        console.log('error')
+    })
 
 
+}
+ngOnInit() {
+
+
+    this.soltarMensajes();
+}
 
 }
